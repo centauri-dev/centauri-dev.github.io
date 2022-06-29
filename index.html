@@ -1,0 +1,116 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>centauri.dev :: success(dedication, persistence, passion)</title>
+    <style>body {
+      background-color: #000000;
+      color: #ffffff;
+      font-family: monospace;
+      font-size: 16px;
+      margin: 10px 50px;
+      letter-spacing: 1px;
+      }
+      .color0 {
+      color: #f92672;
+      }
+      .color1 {
+      color: #66d9ef;
+      }
+      .color2 {
+      color: #a6e22e;
+      }
+      .color3 {
+      color: #fd971f;
+      }
+      .color4 {
+      color: #dc143c;
+      }
+      .color5 {
+      color: #ae81ff;
+      }
+      .color6 {
+      color: #75715e;
+      }
+      .center_div {
+      max-width: 520px;
+      padding: 15px;
+      margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center_div">
+    <pre id="typedtext">  <br><span class="color1">def</span> <span class="color2">success</span>(<span class="color3">dedication</span>, <span class="color3">persistence</span>, <span class="color3">passion</span>)<span class="color4">:</span><br>    <span class="color3">dedication</span> <span class="color4">+=</span> <span class="color5">1</span>  <span class="color6"># dedicate yourself</span><br>    <span class="color3">persistence</span> <span class="color4">+=</span> <span class="color5">1</span>  <span class="color6"># be persistent</span><br>    <span class="color3">passion</span> <span class="color4">=</span> <span class="color1">True</span>  <span class="color6"># have passion</span><br> <br>    <span class="color1">if</span> <span class="color3">passion</span> <span class="color4">==</span> <span class="color1">True</span><span class="color4">:</span><br>        magic <span class="color4">=</span> <span class="color3">dedication</span> <span class="color4">+</span> <span class="color3">persistence</span><br>        <span class="color1">return</span> magic<br>    <span class="color1">else</span><span class="color4">:</span><br>        magic <span class="crimson">=</span> <span class="color5">0</span> <br>        <span class="color1">return</span> magic<br> <br><span class="color6"># love it. make mistakes. learn. keep grinding.</span><br>_</pre>
+    <div>
+    <!--
+      def success(dedication, persistence, passion):
+          dedication += 1  # dedicate yourself
+          persistence += 1  # be persistent
+          passion = True  # have passion
+       
+          if passion == True:
+              magic = dedication + persistence
+              return magic
+          else:
+              magic = 0 
+              return magic
+      
+      # love it. make mistakes. learn. keep grinding.
+      -->
+    <script>
+      // set up text to print, each item in array is new line
+      var aText = new Array(
+        ' ',
+      '<span class="color1">def</span> <span class="color2">success</span>(<span class="color3">dedication</span>, <span class="color3">persistence</span>, <span class="color3">passion</span>)<span class="color4">:</span>',
+      '    <span class="color3">dedication</span> <span class="color4">+=</span> <span class="color5">1</span>  <span class="color6"># dedicate yourself</span>',
+      '    <span class="color3">persistence</span> <span class="color4">+=</span> <span class="color5">1</span>  <span class="color6"># be persistent</span>',
+      '    <span class="color3">passion</span> <span class="color4">=</span> <span class="color1">True</span>  <span class="color6"># have passion</span>',
+      ' ',
+      '    <span class="color1">if</span> <span class="color3">passion</span> <span class="color4">==</span> <span class="color1">True</span><span class="color4">:</span>',
+      '        magic <span class="color4">=</span> <span class="color3">dedication</span> <span class="color4">+</span> <span class="color3">persistence</span>',
+      '        <span class="color1">return</span> magic',
+      '    <span class="color1">else</span><span class="color4">:</span>',
+      '        magic <span class="crimson">=</span> <span class="color5">0</span> ',
+      '        <span class="color1">return</span> magic',
+      ' ',
+      '<span class="color6"># love it. make mistakes. learn. keep grinding.</span>',
+      ''
+        
+      );
+      var iSpeed = 2; // time delay of print out
+      var iIndex = 0; // start printing array at this posision
+      var iArrLength = aText[0].length; // the length of the text array
+      var iScrollAt = 20; // start scrolling up at this many lines
+       
+      var iTextPos = 0; // initialise text position
+      var sContents = ''; // initialise contents variable
+      var iRow; // initialise current row
+       
+      function typewriter()
+      {
+       sContents =  ' ';
+       iRow = Math.max(0, iIndex-iScrollAt);
+       var destination = document.getElementById("typedtext");
+       
+       while ( iRow < iIndex ) {
+        sContents += aText[iRow++] + '<br />';
+       }
+       destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+       if ( iTextPos++ == iArrLength ) {
+        iTextPos = 0;
+        iIndex++;
+        if ( iIndex != aText.length ) {
+         iArrLength = aText[iIndex].length;
+         setTimeout("typewriter()", 500);
+        }
+       } else {
+        setTimeout("typewriter()", iSpeed);
+       }
+      }
+      
+      typewriter();
+      	
+    </script>
+  </div>
+</div>
+</body>
+</html>
